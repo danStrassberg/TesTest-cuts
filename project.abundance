@@ -4,12 +4,7 @@
     "x": 0,
     "y": 0,
     "uniqueID": 1746732648987,
-    "ioValues": [
-        {
-            "name": "name1",
-            "ioValue": 10
-        }
-    ],
+    "ioValues": [],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
     "allAtoms": [
@@ -23,29 +18,49 @@
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
-            "atomType": "Input",
-            "name": "name1",
-            "x": 0.04,
-            "y": 0.32935153583617743,
-            "uniqueID": 1746732817989,
+            "atomType": "Constant",
+            "name": "Square #1 Size",
+            "x": 0.1311407160699417,
+            "y": 0.13310580204778158,
+            "uniqueID": 1746733093969,
             "ioValues": [],
-            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
-            "type": "number"
+            "description": "Defines a mathematical constant.",
+            "value": 15
+        },
+        {
+            "atomType": "Constant",
+            "name": "Square #2 Size",
+            "x": 0.1311407160699417,
+            "y": 0.34812286689419797,
+            "uniqueID": 1746733123168,
+            "ioValues": [],
+            "description": "Defines a mathematical constant.",
+            "value": 10
+        },
+        {
+            "atomType": "Constant",
+            "name": "Square #3 Size",
+            "x": 0.1315570358034971,
+            "y": 0.6075085324232082,
+            "uniqueID": 1746733134250,
+            "ioValues": [],
+            "description": "Defines a mathematical constant.",
+            "value": 5
         },
         {
             "atomType": "Rectangle",
             "name": "Rectangle",
-            "x": 0.291007493755204,
-            "y": 0.3310580204778157,
-            "uniqueID": 1746732915481,
+            "x": 0.2955870108243131,
+            "y": 0.14505119453924914,
+            "uniqueID": 1746733194084,
             "ioValues": [
                 {
                     "name": "x length",
-                    "ioValue": 10
+                    "ioValue": 15
                 },
                 {
                     "name": "y length",
-                    "ioValue": 10
+                    "ioValue": 15
                 }
             ],
             "description": "Creates a new rectangle."
@@ -53,9 +68,9 @@
         {
             "atomType": "Rectangle",
             "name": "Rectangle",
-            "x": 0.3959200666111574,
-            "y": 0.3174061433447099,
-            "uniqueID": 1746732955686,
+            "x": 0.2960033305578684,
+            "y": 0.3447098976109215,
+            "uniqueID": 1746733230179,
             "ioValues": [
                 {
                     "name": "x length",
@@ -69,7 +84,36 @@
             "description": "Creates a new rectangle."
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "number",
+            "ap2Name": "x length",
+            "ap2Primary": false,
+            "ap1ID": 1746733093969,
+            "ap2ID": 1746733194084
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "y length",
+            "ap2Primary": false,
+            "ap1ID": 1746733093969,
+            "ap2ID": 1746733194084
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "x length",
+            "ap2Primary": false,
+            "ap1ID": 1746733123168,
+            "ap2ID": 1746733230179
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "y length",
+            "ap2Primary": false,
+            "ap1ID": 1746733123168,
+            "ap2ID": 1746733230179
+        }
+    ],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
     "compiledBom": {},
