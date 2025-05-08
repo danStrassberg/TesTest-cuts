@@ -14,7 +14,12 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1746732658111,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": 1746733530750
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -50,8 +55,8 @@
         {
             "atomType": "Rectangle",
             "name": "Rectangle",
-            "x": 0.2955870108243131,
-            "y": 0.14505119453924914,
+            "x": 0.2980849292256453,
+            "y": 0.1501706484641638,
             "uniqueID": 1746733194084,
             "ioValues": [
                 {
@@ -69,7 +74,7 @@
             "atomType": "Rectangle",
             "name": "Rectangle",
             "x": 0.2960033305578684,
-            "y": 0.3447098976109215,
+            "y": 0.3600682593856655,
             "uniqueID": 1746733230179,
             "ioValues": [
                 {
@@ -82,6 +87,110 @@
                 }
             ],
             "description": "Creates a new rectangle."
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.29725228975853457,
+            "y": 0.6075085324232082,
+            "uniqueID": 1746733267331,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 5
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 5
+                }
+            ],
+            "description": "Creates a new rectangle."
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.5099916736053289,
+            "y": 0.33276450511945393,
+            "uniqueID": 1746733352407,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1746733194084
+                },
+                {
+                    "name": "height",
+                    "ioValue": 0.75
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Constant",
+            "name": "Board Height",
+            "x": 0.41881765195670273,
+            "y": 0.1552901023890785,
+            "uniqueID": 1746733380632,
+            "ioValues": [],
+            "description": "Defines a mathematical constant.",
+            "value": 0.75
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.5133222314737719,
+            "y": 0.5546075085324232,
+            "uniqueID": 1746733416246,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1746733230179
+                },
+                {
+                    "name": "height",
+                    "ioValue": 0.75
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.5137385512073273,
+            "y": 0.7610921501706485,
+            "uniqueID": 1746733420152,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1746733267331
+                },
+                {
+                    "name": "height",
+                    "ioValue": 0.75
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Assembly",
+            "name": "Assembly",
+            "x": 0.6515403830141548,
+            "y": 0.40955631399317405,
+            "uniqueID": 1746733530750,
+            "ioValues": [
+                {
+                    "name": "Shape 1",
+                    "ioValue": 1746733352407
+                },
+                {
+                    "name": "Shape 2",
+                    "ioValue": 1746733416246
+                },
+                {
+                    "name": "Shape 3",
+                    "ioValue": 1746733420152
+                }
+            ],
+            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
         }
     ],
     "allConnectors": [
@@ -112,6 +221,90 @@
             "ap2Primary": false,
             "ap1ID": 1746733123168,
             "ap2ID": 1746733230179
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "x length",
+            "ap2Primary": false,
+            "ap1ID": 1746733134250,
+            "ap2ID": 1746733267331
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "y length",
+            "ap2Primary": false,
+            "ap1ID": 1746733134250,
+            "ap2ID": 1746733267331
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1746733194084,
+            "ap2ID": 1746733352407
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1746733230179,
+            "ap2ID": 1746733416246
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1746733267331,
+            "ap2ID": 1746733420152
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 1",
+            "ap2Primary": false,
+            "ap1ID": 1746733352407,
+            "ap2ID": 1746733530750
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "height",
+            "ap2Primary": false,
+            "ap1ID": 1746733380632,
+            "ap2ID": 1746733352407
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "height",
+            "ap2Primary": false,
+            "ap1ID": 1746733380632,
+            "ap2ID": 1746733416246
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "height",
+            "ap2Primary": false,
+            "ap1ID": 1746733380632,
+            "ap2ID": 1746733420152
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 2",
+            "ap2Primary": false,
+            "ap1ID": 1746733416246,
+            "ap2ID": 1746733530750
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 3",
+            "ap2Primary": false,
+            "ap1ID": 1746733420152,
+            "ap2ID": 1746733530750
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1746733530750,
+            "ap2ID": 1746732658111
         }
     ],
     "unitsKey": "Inches",
